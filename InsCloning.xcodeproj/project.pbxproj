@@ -12,6 +12,7 @@
 		06C2650A26B93788006DC57D /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C2650926B93788006DC57D /* ProfileHeaderView.swift */; };
 		06CFF90D26BA332C00CEB3D7 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CFF90C26BA332C00CEB3D7 /* UserStatView.swift */; };
 		06CFF90F26BA353D00CEB3D7 /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CFF90E26BA353D00CEB3D7 /* ProfileActionButtonView.swift */; };
+		06CFF91126BA82CC00CEB3D7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CFF91026BA82CC00CEB3D7 /* ImagePicker.swift */; };
 		06D3E11826B774AB00766C0D /* InsCloningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D3E11726B774AB00766C0D /* InsCloningApp.swift */; };
 		06D3E11C26B774AC00766C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D3E11B26B774AC00766C0D /* Assets.xcassets */; };
 		06D3E11F26B774AC00766C0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D3E11E26B774AC00766C0D /* Preview Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		06C2650926B93788006DC57D /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		06CFF90C26BA332C00CEB3D7 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		06CFF90E26BA353D00CEB3D7 /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
+		06CFF91026BA82CC00CEB3D7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		06D3E11426B774AB00766C0D /* InsCloning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InsCloning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D3E11726B774AB00766C0D /* InsCloningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsCloningApp.swift; sourceTree = "<group>"; };
 		06D3E11B26B774AC00766C0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				06C2650526B8E816006DC57D /* Extensions.swift */,
+				06CFF91026BA82CC00CEB3D7 /* ImagePicker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				06D3E11826B774AB00766C0D /* InsCloningApp.swift in Sources */,
 				06D3E14226B790C900766C0D /* MainTabView.swift in Sources */,
 				06D3E14C26B7915000766C0D /* UploadPostView.swift in Sources */,
+				06CFF91126BA82CC00CEB3D7 /* ImagePicker.swift in Sources */,
 				06C2650A26B93788006DC57D /* ProfileHeaderView.swift in Sources */,
 				06D3E14A26B7914800766C0D /* ProfileView.swift in Sources */,
 				06CFF90D26BA332C00CEB3D7 /* UserStatView.swift in Sources */,
