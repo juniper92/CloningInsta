@@ -14,6 +14,7 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                // TODO : F7F7F7 로 배경색 변경하기
                 LinearGradient(gradient: Gradient(colors: [Color.gray, Color.green]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 
@@ -64,17 +65,19 @@ struct LoginView: View {
                     
                     Spacer()
                     
-                    Button(action: {}, label: {
-                        HStack {
-                            Text("Don't have an account?")
-                                .font(.system(size: 14))
-                            
-                            Text("Sigh Up")
-                                .font(.system(size: 14, weight: .semibold))
-                        }.foregroundColor(.white)
-                    }).padding(.bottom, 32)
-                    
+                    NavigationLink(
+                        destination: RegistrationView().navigationBarHidden(true),
+                        label: {
+                            HStack {
+                                Text("Don't have an account?")
+                                    .font(.system(size: 14))
+                                
+                                Text("Sigh Up")
+                                    .font(.system(size: 14, weight: .semibold))
+                            }.foregroundColor(.white)
+                        }).padding(.bottom, 16)                    
                 }
+                .padding(.top, -44)
             }
         }
     }
