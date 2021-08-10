@@ -15,15 +15,8 @@ struct RegistrationView: View {
     @State private var selectedImage: UIImage?
     @State private var image: Image?
     @State var imagePickerPresented = false
-    
-    /* SwiftUI는 기본적으로 이 환경 변수를 사용할 수 있으며 프레젠테이션 모드, 특히 이 모든 항목에서 내비게이션 스택에 무언가가 푸시되었는지 여부를 판단할 수 있다.
-     여기서 '모드' 변수를 사용해 이 화면을 해제할 수 있다.
-     그렇다면 wrappedValue 이건 정확히 어떤 역할을 하는걸까?
-     
-     SwiftUI basically has the ability to use this environment variables and use this presentationMode and particular to determine if something has been presented if something has been pushed on to a navigation stack in all that stuffs.
-     So we can use this 'mode' variable here to dismiss this screen.
-     wrappedValue, let's go check out what this guy is exactly. */
     @Environment(\.presentationMode) var mode
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         ZStack {
@@ -61,14 +54,14 @@ struct RegistrationView: View {
                         .foregroundColor(.white)
                         .padding(.horizontal, 32)
                     
-                    CustomTextField(text: $email, placeholder: Text("Username"), imageName: "person.fill")
+                    CustomTextField(text: $username, placeholder: Text("Username"), imageName: "person.fill")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .foregroundColor(.white)
                         .padding(.horizontal, 32)
                     
-                    CustomTextField(text: $email, placeholder: Text("Full Name"), imageName: "person")
+                    CustomTextField(text: $fullname, placeholder: Text("Full Name"), imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
@@ -83,7 +76,9 @@ struct RegistrationView: View {
                         .padding(.horizontal, 32)
                 }
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    viewModel.register(withEmail: email, password: password, image: selectedImage, fullname: fullname, username: username)
+                }, label: {
                     Text("Sign Up")
                         .font(.headline)
                         .foregroundColor(.white)
