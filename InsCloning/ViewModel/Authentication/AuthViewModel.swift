@@ -15,6 +15,7 @@ class AuthViewModel: ObservableObject {
     
     init() {
         userSession = Auth.auth().currentUser
+        fetchUser()
     }
     
     func login(withEmail email: String, password: String) {
@@ -49,7 +50,7 @@ class AuthViewModel: ObservableObject {
                             "profileImageUrl": imageUrl,
                             "uid": user.uid]
                 
-                Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
+                COLLECTION_USERS.document(user.uid).setData(data) { _ in
                     print("Successfully uploaded user data...")
                     self.userSession = user
                 }
@@ -67,6 +68,11 @@ class AuthViewModel: ObservableObject {
     }
     
     func fetchUser() {
+        /* 사용자의 UID로 문서 식별자를 만들었기 때문에, 이 사용자 세션 속성을 사용하여 사용자의 정보를 매우 쉽게 찾을 수 있다. */
+        guard let uid = userSession?.uid else { return }
+        COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
+            let user = try? snapshot?.data(as: User.self) else { return }
+        }
     }
 }
 
