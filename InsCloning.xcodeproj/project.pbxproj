@@ -15,6 +15,7 @@
 		0634E6AF26C3ABA900C1FFE1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0634E6AE26C3ABA900C1FFE1 /* FirebaseAuth */; };
 		0634E6B126C3ABA900C1FFE1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0634E6B026C3ABA900C1FFE1 /* FirebaseFirestore */; };
 		0634E6B326C3ABA900C1FFE1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0634E6B226C3ABA900C1FFE1 /* FirebaseStorage */; };
+		066B075B26C4F16500822A1F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066B075A26C4F16500822A1F /* SearchViewModel.swift */; };
 		068B2CF726BB8A5E00779984 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B2CF626BB8A5E00779984 /* LoginView.swift */; };
 		068B2CF926BB8A7100779984 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B2CF826BB8A7100779984 /* RegistrationView.swift */; };
 		068B2CFB26BB8A7C00779984 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B2CFA26BB8A7C00779984 /* ResetPasswordView.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		0634E6A326C3676F00C1FFE1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0634E6A526C39E3000C1FFE1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		066B075A26C4F16500822A1F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		068B2CF626BB8A5E00779984 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		068B2CF826BB8A7100779984 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		068B2CFA26BB8A7C00779984 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				06D3E13B26B7838900766C0D /* Authentication */,
 				06D3E13A26B7838300766C0D /* Notifications */,
 				06D3E13926B7837F00766C0D /* Feed */,
+				066B075A26C4F16500822A1F /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				06D3E15626B8CF9E00766C0D /* UserCell.swift in Sources */,
 				06D3E15226B8188F00766C0D /* SearchBar.swift in Sources */,
 				068B2CFF26BBA83100779984 /* CustomSecureField.swift in Sources */,
+				066B075B26C4F16500822A1F /* SearchViewModel.swift in Sources */,
 				06D3E14826B7913700766C0D /* NotificationsView.swift in Sources */,
 				06D3E15026B7AE3400766C0D /* FeedCell.swift in Sources */,
 				0634E6A626C39E3000C1FFE1 /* User.swift in Sources */,

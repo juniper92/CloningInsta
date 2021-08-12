@@ -5,4 +5,10 @@
 //  Created by HI on 2021/08/12.
 //
 
-import Foundation
+import SwiftUI
+
+class SearchViewModel: ObservableObject {
+    @Published var users = [User]()
+    
+    
+}

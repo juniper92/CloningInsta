@@ -71,8 +71,10 @@ class AuthViewModel: ObservableObject {
         /* 사용자의 UID로 문서 식별자를 만들었기 때문에, 이 사용자 세션 속성을 사용하여 사용자의 정보를 매우 쉽게 찾을 수 있다. */
         guard let uid = userSession?.uid else { return }
         COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
-            let user = try? snapshot?.data(as: User.self) else { return }
+            guard let user = try? snapshot?.data(as: User.self) else { return }
+            print("DEBUG: User is \(user)")
         }
     }
 }
+
 
